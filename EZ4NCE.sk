@@ -1,0 +1,13 @@
+options:
+	ez4nce: coal named "&bEZ4NCE" with lore "&aChyba bedzie zadymka!"
+command /EZ4NCE:
+	cooldown: 15 minutes
+	cooldown message: &cNie mozesz uzyc tej komendy jeszcze przez &f%remaining time%&c!
+	trigger:
+			give 1 {@ez4nce} to player
+			send "&aez"s
+on rightclick:
+	if player's tool is {@ez4nce}:
+		send "&aUzyles EZ4NCE!"
+		remove 1 {@ez4nce} from player
+		apply strength 3 to player for 10 seconds
